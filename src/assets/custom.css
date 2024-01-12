@@ -1,0 +1,100 @@
+.footer {
+    background-color: var(--kt-footer-bg-color);
+}
+.fs-custom {
+    font-size: 1.1rem !important;
+}
+.btn-brand-theme {
+    background-color: #4EAC6D !important;
+    color: white !important;
+    border-color: #4EAC6D !important;
+}
+.text-brand-theme {
+    color: #4EAC6D !important;
+    text-decoration: none !important;
+}
+
+.bg-white-blue {
+    background: #F1F4F7;
+}
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--bs-brand-theme) !important;
+}
+
+.form-control {
+    height: 40px;
+}
+
+
+.blocking-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 0.5 */
+    z-index: 1000; /* Đảm bảo lớp này nằm trên cùng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add your progress styles here */
+.progress-4 {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: linear-gradient(90deg, #4EAC6D 70%, #4EAC6D 0) 0/20%;
+    background: linear-gradient(#4EAC6D 0 0) 0/0% no-repeat #4EAC6D;
+    animation: p4 2s infinite steps(6);
+}
+
+@keyframes p4 {
+    100% { background-size: 120% }
+}
+
+.progress-5 {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #4EAC6D;
+    border-right-color: transparent;
+    padding: 3px;
+    background: repeating-linear-gradient(90deg, #4EAC6D 0 10px, #0000 0 15px)
+    0/0% no-repeat content-box content-box;
+    position: relative;
+    animation: p5 2s infinite steps(6);
+}
+
+.progress-5::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 100%;
+    width: 10px;
+    background: linear-gradient(
+            #4EAC6D calc(50% - 7px), #4EAC6D 0 calc(50% - 5px),
+            #4EAC6D 0 calc(50% + 5px), #4EAC6D 0 calc(50% + 7px), #4EAC6D 0
+    ) left /100% 100%,
+    linear-gradient(
+            #4EAC6D calc(50% - 5px), #4EAC6D 0 calc(50% + 5px), #4EAC6D 0
+    ) left /2px 100%,
+    linear-gradient(
+            #4EAC6D calc(50% - 5px), #4EAC6D 0 calc(50% + 5px), #4EAC6D 0
+    ) right/2px 100%;
+    background-repeat: no-repeat;
+}
+
+select option {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+select option:checked {
+    background-color: #e0e0e0;
+}
+
+/* Style the select when it's in focus */
+select:hover, select:focus, select:active, select:target {
+    border-color: #4EAC6D !important; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+}

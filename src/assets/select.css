@@ -1,0 +1,139 @@
+.selected-options {
+    height: 100%;
+}
+.custom-select {
+    position: relative;
+}
+.custom-select-multiple {
+    height: 100%;
+    position: relative;
+}
+.chosen-multiple-value {
+    height: 100%;
+    background-color: #FAFCFD;
+}
+
+.chosen-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: #FAFCFD;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #4EAC6D;
+    position: relative;
+}
+
+.chosen-value::-webkit-input-placeholder {
+    color: #333;
+}
+
+.custom-select::before,.custom-select-multiple::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    z-index: 9;
+    width: 12px;
+    height: 12px;
+    border: 2px solid grey;
+    border-top: transparent;
+    border-right: transparent;
+    transform: translateY(-50%) rotate(-45deg);
+    pointer-events: none;
+    transition: all 0.3s linear;
+}
+.chosen-value:hover {
+    border-color: #4EAC6D;
+    cursor: pointer;
+}
+.chosen-value:hover::-webkit-input-placeholder {
+    color: #333;
+}
+.chosen-value:focus, .chosen-value.open {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+    outline: 0;
+    border-color: #4EAC6D;
+    color: #000;
+}
+.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
+    color: #000;
+}
+.value-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 10;
+    max-height: 200px;
+}
+
+.value-list.open {
+    max-height: 320px;
+    overflow: auto;
+}
+.value-list li {
+    position: relative;
+    height: 4rem;
+    background-color: #FAFCFD;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: 1;
+}
+.value-list li:hover {
+    background-color: #4EAC6D;
+    color: white;
+}
+
+.value-list li:hover .check-mark {
+    color: #4EAC6D;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+.value-list li.closed {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    opacity: 0;
+}
+.clear-button {
+    background: none;
+    color: grey;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    position: absolute;
+    right: 40px;
+    top: 20%;
+    z-index: 9;
+    width: 12px;
+    height: 12px;
+    border-top: transparent;
+    border-right: transparent;
+}
+.check-mark {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    background: #4EAC6D;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+
+.option-selected {
+    background: lightgray;
+    padding: 5px;
+    border-radius: 4px;
+}

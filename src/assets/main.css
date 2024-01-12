@@ -1,0 +1,52 @@
+@import './base.css';
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+* {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+#app {
+    margin: 0 auto;
+    font-weight: normal;
+    font-family: Cerebri Sans, sans-serif;
+
+}
+
+.btn-ct-primary {
+    background: var(--btn-ct-bg-primary);
+}
+
+.avatar-sm {
+    height: 2.4rem;
+    width: 2.4rem
+}
+
+.avatar-xs {
+    height: 1.8rem;
+    width: 1.8rem
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
